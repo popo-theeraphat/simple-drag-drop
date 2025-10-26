@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* สไตล์สำหรับองค์ประกอบที่สามารถลากได้ */
+.draggable {
+    width: 150px;
+    height: 100px;
+    background-color: #3498db; /* สีน้ำเงิน */
+    color: white;
+    text-align: center;
+    line-height: 100px; /* จัดกึ่งกลางแนวตั้ง */
+    cursor: grab; /* เปลี่ยนเคอร์เซอร์เพื่อบ่งบอกว่าลากได้ */
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-in-out;
+}
+
+/* สไตล์สำหรับพื้นที่สำหรับวาง */
+.dropzone {
+    width: 300px;
+    height: 200px;
+    border: 3px dashed #2ecc71; /* เส้นประสีเขียว */
+    background-color: #ecf0f1; /* สีเทาอ่อน */
+    text-align: center;
+    line-height: 200px; /* จัดกึ่งกลางแนวตั้ง */
+    color: #7f8c8d;
+    border-radius: 10px;
+}
+
+/* สไตล์เมื่อองค์ประกอบถูกลากเข้ามาในเขตวาง */
+.dropzone.dragover {
+    background-color: #bdc3c7; /* เปลี่ยนสีพื้นหลังเมื่อมีการลากทับ */
+    border-color: #c0392b; /* เปลี่ยนสีเส้นขอบเป็นสีแดง */
+}
+
+/* สไตล์เมื่อองค์ประกอบกำลังถูกลาก (ให้ดูโปร่งใสเล็กน้อย) */
+.draggable.dragging {
+    opacity: 0.5;
+}
