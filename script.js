@@ -71,7 +71,9 @@ dropzone.addEventListener('drop', (e) => {
         dropzone.appendChild(draggedElement); 
         
         // **การปรับปรุง:** เปลี่ยนเนื้อหา Drop Zone
-        dropzone.innerHTML = `วางสำเร็จ! องค์ประกอบ ID: **${id}** อยู่ที่นี่`;
+        draggable.classList.remove('dragging');
+        draggable.innerHTML = "I'm in here";
+        dropzone.innerHTML = draggable.outerHTML;
         
         // ปรับสไตล์องค์ประกอบที่ถูกย้าย (ไม่บังคับ)
         draggedElement.style.margin = '10px auto';

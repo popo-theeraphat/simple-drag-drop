@@ -7,8 +7,7 @@ body {
     padding: 20px;
 }
 
-/* สไตล์สำหรับองค์ประกอบที่สามารถลากได้ */
-.draggable {
+.simple-box{
     width: 150px;
     height: 100px;
     background-color: #3498db; /* สีน้ำเงิน */
@@ -19,6 +18,7 @@ body {
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.1s ease-in-out;
+    font-size: 1em;
 }
 
 /* สไตล์สำหรับพื้นที่สำหรับวาง */
@@ -31,6 +31,7 @@ body {
     line-height: 200px; /* จัดกึ่งกลางแนวตั้ง */
     color: #7f8c8d;
     border-radius: 10px;
+    position: relative;
 }
 
 /* สไตล์เมื่อองค์ประกอบถูกลากเข้ามาในเขตวาง */
